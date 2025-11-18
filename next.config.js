@@ -7,11 +7,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  turbopack: {
-    root: process.cwd(),
-  },
   experimental: {
     optimizePackageImports: ["@radix-ui/react-*"],
+    turbo: false, // Turbopack-ты өшіру
   },
 }
 
