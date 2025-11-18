@@ -4,6 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Shield, FileText, Users, AlertTriangle, Download } from "lucide-react"
 
 // PDF файлдарының құрылымы
+// PDF файлдарының құрылымы
 const complianceDocuments = {
   policies: [
     {
@@ -24,99 +25,105 @@ const complianceDocuments = {
     {
       title: "«Қызылорда облыстық тері – венерология диспансері» ШЖҚ КМК қызметкерлеріне арналған сыбайлас жемқорлыққа қарсы іс-қимыл жөніндегі нұсқаулық",
       size: "3.72 Mb",
-      path: "/pdf/compliance/nusqauliq.pdf"
+      path: "/komp-nuskaulyk.pdf"
     },
     {
       title: "«Қызылорда облыстық тері – венерология диспансері» ШЖҚ КМК-ның сыбайлас жемқорлыққа қарсы саясаты",
       size: "1.12 Mb",
-      path: "/pdf/compliance/sayasaty.pdf"
+      path: "/komp-sajasat.pdf"
     },
     {
       title: "«Қызылорда облыстық тері – венерология диспансері» ШЖҚ КМК сыбайлас жемқорлыққа қарсы комплаенс-қызметі туралы ЕРЕЖЕСІ",
       size: "3.73 Mb",
-      path: "/pdf/compliance/eregesi.pdf"
+      path: "/erezhe.pdf"
     },
     {
       title: "«Қызылорда облыстық жұқпалы аурулар ауруханасы» ШЖҚ ККМ-ның Корпоративтік этика және мінез-құлық кодексі",
       size: "2.03 Mb",
-      path: "/pdf/compliance/kodeksi.pdf"
+      path: "/jetika.pdf"
     }
   ],
+
+
+
+
   analysis: [
     {
       title: "Сыбайлас жемқорлық тәуекелдерін ішкі талдау нәтижелері бойынша анықталған сыбайлас жемқорлық құқық бұзушылықтар жасауға ықпал ететін себептер мен жағдайларды жою бойынша іс-шаралар жоспары",
       size: "764.08 Kb",
-      path: "/pdf/compliance/is-sharalari.pdf"
+      path: "/222.pdf"
     },
     {
       title: "Талдамалық анықтама",
       size: "2.52 Mb",
-      path: "/pdf/compliance/taldamaly-aniktama.pdf"
+      path: "/taldau-212223.pdf"
     },
     {
       title: "«Қызылорда облыстық тері – венерология диспансері» ШЖҚ КМК-ның мүдделер қақтығысын реттеу саясаты",
       size: "6.99 Mb",
-      path: "/pdf/compliance/muddeleri-qaqtygasyni.pdf"
+      path: "/file0003.pdf"
     }
   ],
   minutes: [
     {
       title: "«Қызылорда облыстық тері – венерология диспансері» ШЖҚ КМК-ның 2024 жылдың І – ші тоқсандағы сыбайлас жемқорлық тәуекелдеріне ішкі талдау жүргізу нәтижелері бойынша талдамалық анықтама",
       size: "1.25 Mb",
-      path: "/pdf/compliance/1-quarter-2024.pdf"
+      path: "/hattama-3-toksan.pdf"
     },
     {
       title: "«Қызылорда облыстық тері – венерология диспансері» ШЖҚ КММ-нің 2023 жылдың ІІІ - тоқсанына өткізілген жиналыс ХАТТАМАСЫ №2",
       size: "1.07 Mb",
-      path: "/pdf/compliance/minuites-2023-3.pdf"
+      path: "/prikaz.pdf"
     },
     {
       title: "Бұйрық - Сыбайлас жемқорлық тәуекелдеріне жүргізу туралы",
       size: "684.71 Kb",
-      path: "/pdf/compliance/buyriq-tauekelderi.pdf"
+      path: "/plan.pdf"
     },
     {
       title: "Қызылорда облыстық тері – венерология диспансерінің 2024 жылдың - Жоспары",
       size: "662.37 Kb",
-      path: "/pdf/compliance/2024-jospary.pdf"
+      path: "/zharia-hattama.pdf"
     },
+
+
+    
     {
       title: "Сыбайлас жемқорлық тәуекелдеріне жүргізілген ішкі талдау нәтижесінің жария талқылау ХАТТАМАСЫ",
       size: "330.15 Kb",
-      path: "/pdf/compliance/jaria-talqylau.pdf"
+      path: "/aniktama.pdf"
     },
     {
       title: "«Қызылорда облыстық тері – венерология диспансері» ШЖҚ КМК медицина қызметкерлеріне сыбайла жемқорлықтың алдын алу жөніндегі отырысының ХАТТАМАСЫ №1",
       size: "480.86 Kb",
-      path: "/pdf/compliance/otyrysy-1.pdf"
+      path: "/hattamasi1.pdf"
     },
     {
       title: "«Қызылорда облыстық тері – венерология диспансері» ШЖҚ КММ-нің 2024 жылдың ІІІ - тоқсанына өткізілген жиналыс ХАТТАМАСЫ №3",
       size: "1.1 Mb",
-      path: "/pdf/compliance/minuites-2024-3.pdf"
+      path: "/3.pdf"
     },
     {
       title: "«Қызылорда облыстық тері – венерология диспансері» ШЖҚ КММ-нің 2024 жылдың ІV - тоқсанына өткізілген жиналыс ХАТТАМАСЫ №4",
       size: "1.72 Mb",
-      path: "/pdf/compliance/minuites-2024-4.pdf"
+      path: "/file-5.pdf"
     },
     {
       title: "Бұйрық - Сыбайлас жемқорлық тәуекелдеріне ішкі талдау жүргізудің үлгілік қағидаларын бекіту туралы",
       size: "559.86 Kb",
-      path: "/pdf/compliance/buyriq-yldidik-qagidalar.pdf"
+      path: "/bjry.pdf"
     },
     {
       title: "Сыбайлас жемқорлық тәуекелдеріне жүргізілген ішкі талдау нәтижесінің жария талқылау ХАТТАМАСЫ (2-бөлім)",
       size: "336.36 Kb",
-      path: "/pdf/compliance/jaria-talqylau-2.pdf"
+      path: "/zharijalau-h.pdf"
     },
     {
       title: "Сыбайлас жемқорлық тәуекелдеріне ішкі талдау нәтижелері бойынша талдамалық анықтамасы",
       size: "1.16 Mb",
-      path: "/pdf/compliance/taldamaly-aniktama-2.pdf"
+      path: "/taldau_.pdf"
     }
   ]
-}
 
 // PDF файлын скачат компоненты
 function DocumentLink({ title, size, path }: { title: string; size: string; path: string }) {
