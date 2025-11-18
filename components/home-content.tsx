@@ -22,7 +22,7 @@ export function HomeContent() {
       titleKz: "Қолданысқа арналған жадынама. Мемлекеттік құжаттарды электронды түрде қабылдау",
       titleRu: "Справка по использованию. Прием государственных документов в электронном виде",
       date: "08 мамыр 2023 ж. / 08 мая 2023 г.",
-      image: "/electronic-documents.jpg",
+      image: "/image.png",
     },
   ]
 
@@ -150,7 +150,7 @@ export function HomeContent() {
                     {language === 'ru' ? 'БЛОГ ГЛАВНОГО ВРАЧА' : 'БАС ДӘРІГЕРДІҢ БЛОГЫ'}
                   </h2>
                   <img
-                    src="/medical-director-portrait.jpg"
+                    src="/WhatsApp Image 2025-11-17 at 11.29.46.jpeg"
                     alt="Director"
                     className="w-full h-48 object-cover rounded mb-3"
                   />
