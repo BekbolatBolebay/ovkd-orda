@@ -8,10 +8,11 @@ export function Team() {
       name: "Әмір Нұрлан Әмірұлы",
       specialty: "Бас дәрігер",
       description: "Қызылорда облыстық тері-венерология диспансерінің бас дәрігері",
-      image: "/",
+      image: "/path/to/image.jpg", // Мысалы, дұрыс жол
       href: "/about/chief",
     },
-   
+    // Басқа дәрігерлерді қосу
+  ]
 
   return (
     <section id="team" className="bg-white py-16 md:py-24">
@@ -28,7 +29,12 @@ export function Team() {
             <Card key={index} className="overflow-hidden border-none shadow-sm transition-shadow hover:shadow-md">
               <div className="relative aspect-square">
                 <Link href={doctor.href || "#"}>
-                  <Image src={doctor.image || "/placeholder.svg"} alt={doctor.name} fill className="object-cover cursor-pointer" />
+                  <Image
+                    src={doctor.image || "/placeholder.svg"} // Егер сурет болмаса, placeholder.svg көрсетіледі
+                    alt={doctor.name}
+                    layout="fill" // layout="fill" дұрыс қолданылды
+                    className="object-cover cursor-pointer"
+                  />
                 </Link>
               </div>
               <CardContent className="p-6 text-center">
