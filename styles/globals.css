@@ -1,0 +1,132 @@
+/* Standard Tailwind CSS imports for v3 */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS variables for colors */
+:root {
+  --color-background: #ffffff;
+  --color-foreground: #000000;
+  --color-primary: #3b82f6;
+  --color-secondary: #10b981;
+  --color-muted: #f3f4f6;
+  --radius: 1rem;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+/* Dark mode colors */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #1a1a1a;
+    --color-foreground: #f5f5f5;
+    --color-primary: #60a5fa;
+    --color-secondary: #34d399;
+  }
+}
+
+/* Base HTML and body styles */
+html, body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/* Container utility */
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(10px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-in-out both;
+}
+
+/* Button styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* Card styles */
+.card {
+  background-color: var(--color-muted);
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Input, textarea, select styles */
+input, 
+textarea, 
+select {
+  border: 1px solid #d1d5db;
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+input:focus, 
+textarea:focus, 
+select:focus {
+  outline: none;
+  ring: 2px;
+  ring-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
