@@ -103,7 +103,7 @@ export default function ChiefDoctorBlogPage() {
           <aside className="hidden lg:block">
             <div className="space-y-4">
               <div className="bg-white rounded-lg p-4 shadow text-center">
-                <img src="/medical-director-portrait.jpg" alt="Бас дәрігер" className="mx-auto w-48 h-56 object-cover rounded" />
+                <img src="/WhatsApp Image 2025-11-17 at 11.29.46.jpeg" alt="Бас дәрігер" className="mx-auto w-48 h-56 object-cover rounded" />
                 <h3 className="mt-3 font-semibold">Үсейінов САКЕН АЛЕУДИНОВИЧ</h3>
               </div>
 
