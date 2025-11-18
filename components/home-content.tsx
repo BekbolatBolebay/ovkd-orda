@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Calendar, FileText } from "lucide-react"
+import { Calendar, FileText } from 'lucide-react'
 import { useLanguage } from "@/components/language-provider"
 
 export function HomeContent() {
@@ -116,6 +116,7 @@ export function HomeContent() {
                 </div>
               </CardContent>
             </Card>
+          </div>
 
           {/* Right Sidebar - Director & Quick Actions */}
           <div className="lg:col-span-3 space-y-6">
@@ -187,6 +188,3 @@ export function HomeContent() {
     </main>
   )
 }
-
-
-
