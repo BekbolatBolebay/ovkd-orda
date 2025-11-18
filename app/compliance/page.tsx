@@ -4,7 +4,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Shield, FileText, Users, AlertTriangle, Download } from "lucide-react"
 
 // PDF файлдарының құрылымы
-// PDF файлдарының құрылымы
 const complianceDocuments = {
   policies: [
     {
@@ -44,9 +43,6 @@ const complianceDocuments = {
     }
   ],
 
-
-
-
   analysis: [
     {
       title: "Сыбайлас жемқорлық тәуекелдерін ішкі талдау нәтижелері бойынша анықталған сыбайлас жемқорлық құқық бұзушылықтар жасауға ықпал ететін себептер мен жағдайларды жою бойынша іс-шаралар жоспары",
@@ -85,9 +81,6 @@ const complianceDocuments = {
       size: "662.37 Kb",
       path: "/zharia-hattama.pdf"
     },
-
-
-    
     {
       title: "Сыбайлас жемқорлық тәуекелдеріне жүргізілген ішкі талдау нәтижесінің жария талқылау ХАТТАМАСЫ",
       size: "330.15 Kb",
@@ -124,6 +117,7 @@ const complianceDocuments = {
       path: "/taldau_.pdf"
     }
   ]
+}
 
 // PDF файлын скачат компоненты
 function DocumentLink({ title, size, path }: { title: string; size: string; path: string }) {
