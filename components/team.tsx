@@ -8,34 +8,10 @@ export function Team() {
       name: "Әмір Нұрлан Әмірұлы",
       specialty: "Бас дәрігер",
       description: "Қызылорда облыстық тері-венерология диспансерінің бас дәрігері",
-      image: "/medical-director-portrait.jpg",
+      image: "/",
       href: "/about/chief",
     },
-    {
-      name: "Д-р Сара Джексон",
-      specialty: "Кардиолог",
-      description: "15 жылдан астам жүрек ауруларын емдеу тәжірибесі бар маман",
-      image: "/female-doctor-professional.jpg",
-    },
-    {
-      name: "Д-р Майкл Чен",
-      specialty: "Хирург",
-      description: "Күрделі операцияларды орындауда танымал хирург",
-      image: "/male-surgeon-professional.jpg",
-    },
-    {
-      name: "Д-р Эмили Родригес",
-      specialty: "Невролог",
-      description: "Ми мен жүйке жүйесі ауруларын емдеу бойынша маман",
-      image: "/female-neurologist-professional.jpg",
-    },
-    {
-      name: "Д-р Дэвид Томпсон",
-      specialty: "Реабилитолог",
-      description: "Дене қалпына келтіру және физиотерапия бойынша маман",
-      image: "/male-physiotherapist-professional.jpg",
-    },
-  ]
+   
 
   return (
     <section id="team" className="bg-white py-16 md:py-24">
