@@ -117,29 +117,6 @@ export function HomeContent() {
               </CardContent>
             </Card>
 
-            {/* Stats Section */}
-            <div className="grid grid-cols-3 gap-4">
-              <Card className="bg-gradient-to-br from-cyan-500 to-cyan-600 text-white">
-                <CardContent className="p-6 text-center">
-                  <div className="text-3xl font-bold mb-1">15+</div>
-                  <div className="text-sm">{language === 'ru' ? 'Лет опыта' : 'Жыл тәжірибе'}</div>
-                </CardContent>
-              </Card>
-              <Card className="bg-gradient-to-br from-red-500 to-red-600 text-white">
-                <CardContent className="p-6 text-center">
-                  <div className="text-3xl font-bold mb-1">5000+</div>
-                  <div className="text-sm">{language === 'ru' ? 'Пациентов вылечено' : 'Емделген науқас'}</div>
-                </CardContent>
-              </Card>
-              <Card className="bg-gradient-to-br from-cyan-500 to-cyan-600 text-white">
-                <CardContent className="p-6 text-center">
-                  <div className="text-3xl font-bold mb-1">98%</div>
-                  <div className="text-sm">{language === 'ru' ? 'Удовлетворение' : 'Қанағаттану'}</div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-
           {/* Right Sidebar - Director & Quick Actions */}
           <div className="lg:col-span-3 space-y-6">
             {/* Director Card */}
