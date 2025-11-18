@@ -94,7 +94,7 @@ export function HomeContent() {
             <Card className="mb-6">
               <CardContent className="p-0">
                 <img
-                  src="/image.jpg"
+                  src="/image.png"
                   alt="Featured"
                   className="w-full h-64 md:h-96 object-cover rounded-t"
                 />
