@@ -8,17 +8,19 @@ export function Team() {
       name: "Әмір Нұрлан Әмірұлы",
       specialty: "Бас дәрігер",
       description: "Қызылорда облыстық тері-венерология диспансерінің бас дәрігері",
-      image: "/path/to/image.jpg", // Мысалы, дұрыс жол
+      image: "/path/to/image.jpg", // Мұнда өз суретіңізді қосыңыз
       href: "/about/chief",
     },
-    // Басқа дәрігерлерді қосу
-  ]
+    // Басқа дәрігерлерді қосуға болады
+  ];
 
   return (
     <section id="team" className="bg-white py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="mb-12 text-center">
-          <h2 className="text-balance text-3xl font-bold text-gray-900 md:text-4xl">Біздің Мамандармен Танысыңыз</h2>
+          <h2 className="text-balance text-3xl font-bold text-gray-900 md:text-4xl">
+            Біздің Мамандармен Танысыңыз
+          </h2>
           <p className="mt-4 text-pretty text-lg text-gray-600">
             Біздің дәрігерлер тобы сіздерге кәсіби көмек көрсетуге дайын
           </p>
@@ -55,5 +57,5 @@ export function Team() {
         </div>
       </div>
     </section>
-  )
+  );
 }
