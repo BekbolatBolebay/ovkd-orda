@@ -1,4 +1,8 @@
--- Create news table
+-- ========================================
+-- 1️⃣ Кестелер
+-- ========================================
+
+-- News
 create table if not exists public.news (
   id uuid primary key default gen_random_uuid(),
   title text not null,
@@ -10,7 +14,7 @@ create table if not exists public.news (
   updated_at timestamp with time zone default now()
 );
 
--- Create services table
+-- Services
 create table if not exists public.services (
   id uuid primary key default gen_random_uuid(),
   category text not null,
@@ -22,7 +26,7 @@ create table if not exists public.services (
   updated_at timestamp with time zone default now()
 );
 
--- Create doctors table
+-- Doctors
 create table if not exists public.doctors (
   id uuid primary key default gen_random_uuid(),
   name text not null,
@@ -34,7 +38,7 @@ create table if not exists public.doctors (
   updated_at timestamp with time zone default now()
 );
 
--- Create site_content table for managing various content sections
+-- Site content
 create table if not exists public.site_content (
   id uuid primary key default gen_random_uuid(),
   section text not null unique,
@@ -42,75 +46,56 @@ create table if not exists public.site_content (
   updated_at timestamp with time zone default now()
 );
 
--- Enable RLS
+-- ========================================
+-- 2️⃣ RLS қосу
+-- ========================================
 alter table public.news enable row level security;
 alter table public.services enable row level security;
 alter table public.doctors enable row level security;
 alter table public.site_content enable row level security;
 
--- Create policies for public read access
-create policy "Allow public read access to news"
-  on public.news for select
-  using (true);
+-- ========================================
+-- 3️⃣ Public оқуға саясаттар
+-- ========================================
+create policy "Public read news" on public.news for select using (true);
+create policy "Public read services" on public.services for select using (true);
+create policy "Public read doctors" on public.doctors for select using (true);
+create policy "Public read site_content" on public.site_content for select using (true);
 
-create policy "Allow public read access to services"
-  on public.services for select
-  using (true);
+-- ========================================
+-- 4️⃣ Admin (authenticated) толық CRUD саясаттар
+-- ========================================
 
-create policy "Allow public read access to doctors"
-  on public.doctors for select
-  using (true);
+-- News
+create policy "Admin insert news" on public.news for insert with check (auth.role() = 'authenticated');
+create policy "Admin update news" on public.news for update using (auth.role() = 'authenticated');
+create policy "Admin delete news" on public.news for delete using (auth.role() = 'authenticated');
 
-create policy "Allow public read access to site_content"
-  on public.site_content for select
-  using (true);
+-- Services
+create policy "Admin insert services" on public.services for insert with check (auth.role() = 'authenticated');
+create policy "Admin update services" on public.services for update using (auth.role() = 'authenticated');
+create policy "Admin delete services" on public.services for delete using (auth.role() = 'authenticated');
 
--- Create policies for authenticated users (admins) to manage content
-create policy "Allow authenticated users to insert news"
-  on public.news for insert
-  with check (auth.role() = 'authenticated');
+-- Doctors
+create policy "Admin insert doctors" on public.doctors for insert with check (auth.role() = 'authenticated');
+create policy "Admin update doctors" on public.doctors for update using (auth.role() = 'authenticated');
+create policy "Admin delete doctors" on public.doctors for delete using (auth.role() = 'authenticated');
 
-create policy "Allow authenticated users to update news"
-  on public.news for update
-  using (auth.role() = 'authenticated');
+-- Site content
+create policy "Admin insert site_content" on public.site_content for insert with check (auth.role() = 'authenticated');
+create policy "Admin update site_content" on public.site_content for update using (auth.role() = 'authenticated');
 
-create policy "Allow authenticated users to delete news"
-  on public.news for delete
-  using (auth.role() = 'authenticated');
-
-create policy "Allow authenticated users to insert services"
-  on public.services for insert
-  with check (auth.role() = 'authenticated');
-
-create policy "Allow authenticated users to update services"
-  on public.services for update
-  using (auth.role() = 'authenticated');
-
-create policy "Allow authenticated users to delete services"
-  on public.services for delete
-  using (auth.role() = 'authenticated');
-
-create policy "Allow authenticated users to insert doctors"
-  on public.doctors for insert
-  with check (auth.role() = 'authenticated');
-
-create policy "Allow authenticated users to update doctors"
-  on public.doctors for update
-  using (auth.role() = 'authenticated');
-
-create policy "Allow authenticated users to delete doctors"
-  on public.doctors for delete
-  using (auth.role() = 'authenticated');
-
-create policy "Allow authenticated users to insert site_content"
-  on public.site_content for insert
-  with check (auth.role() = 'authenticated');
-
-create policy "Allow authenticated users to update site_content"
-  on public.site_content for update
-  using (auth.role() = 'authenticated');
-
--- Create indexes for better performance
+-- ========================================
+-- 5️⃣ Индекстер (оқу жылдамдығы үшін)
+-- ========================================
 create index if not exists news_published_date_idx on public.news(published_date desc);
 create index if not exists services_category_idx on public.services(category);
 create index if not exists doctors_sort_order_idx on public.doctors(sort_order);
+
+-- ========================================
+-- 6️⃣ Тест үшін уақытша RLS өшіру (қажет болса)
+-- ========================================
+-- alter table public.news disable row level security;
+-- alter table public.services disable row level security;
+-- alter table public.doctors disable row level security;
+-- alter table public.site_content disable row level security;
