@@ -174,7 +174,7 @@ export function Header() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between gap-4">
             <div className="flex items-center gap-4">
-              <img src="/kazakhstan-emblem-logo.jpg" alt="Logo" className="h-16 w-16 md:h-20 md:w-20" />
+              <img src="/IMG_20251120_114830_822.jpg" alt="Logo" className="h-16 w-16 md:h-20 md:w-20" />
               <div>
                 <p className="text-xs md:text-sm text-gray-600">{t.header?.brand?.line1 || 'Қызылорда облысының денсаулық сақтау басқармасының'}</p>
                 <h1 className="text-lg md:text-2xl font-bold text-red-600">
